@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/script.js"></script>
+    <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css" />
+    <script>
+        setTimeout(function() {
+           $('#successMessage').fadeOut('fast');
+       }, 10000); // <-- time in milliseconds
+
+    </script>
+  </head>
+  <body>
+      <header>
+          <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#">FeedBack</a>
+                </div>
+              </div>
+            </nav>
+      </header>
+
+      <!-- <% if(locals.message){ %>
+        <div class="container">
+        <div class="alert alert-success" id="successMessage" role="alert">
+            <strong>Well done!</strong> <%=message.success%>
+        </div>
+        </div>
+     <% } %> -->
+
+<form action="/" method="POST" id="formID" autocomplete="off">
+  <div class="container">
+    
+    <div class="row">
+<div class="col-sm-4">
+    <img src="/images/1.png" alt="..." class="img-thumbnail emogisize">
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="feedBackDetail" id="excillient" value="excillient">
+        <span>Excillient</span>
+    </div>
+
+</div>
+
+<div class="col-sm-4">
+    <img src="/images/2.png" alt="..." class="img-thumbnail emogisize">
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="feedBackDetail" id="verygood" value="verygood">
+        <span>Very Good</span>
+      </div>
+
+</div>
+
+<div class="col-sm-4">
+    <img src="/images/3.png" alt="..." class="img-thumbnail emogisize">
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="feedBackDetail" id="good" value="good">
+        <span>Good</span>
+    </div>
+</div>
+</div>
+
+<div class="row rowspace">
+     
+    <div class="form-group">
+        <input class="form-control" type="number" name="phonenumber" placeholder="enter mobile number">
+    </div>
+
+    <div class="form-group">
+        <textarea class="form-control" aria-label="With textarea" name="comment" placeholder="more thing to say"></textarea>
+    </div>
+
+</div>
+ <div class="row">
+    <button type="submit" class="btn btn-primary" name="submitDetails">Submit</button>
+ </div>
+
+  </div>
+  </form>
+  </body>
+</html>
